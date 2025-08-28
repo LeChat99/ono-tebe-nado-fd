@@ -3,15 +3,14 @@
     grid-template-columns: 1fr 148px 1fr;
     justify-content: space-around;
     align-content: center;
-    height: 293px;
-    padding: 0 50px;
+    align-items: center;
+    padding: 93px 50px 93px 50px;
 }
 
 .header_menu {
     display: flex;
     align-items: center;
-    gap: 27px;
-    height: 100px;
+    gap: 36px;
     margin: 0;
     padding-left: 0;
     list-style-type: circle;
@@ -20,23 +19,30 @@
 .header_menu_item {
     font-weight: 400;
     font-size: 18px;
+    text-underline-offset: 4px;
+    word-spacing: 1px;
+    &:nth-child(1) {
+        list-style-type: none;
+    }
+}
+
+.link_active {
+    text-decoration: none;
 }
 
 a {
     color: black;
 }
 
-.header_menu_item:hover, a:hover {
-    text-decoration: none;
-    list-style-type: none;
-}
-
 .logo {
     width: 148px;
+    margin-top: 2px;
+    margin-left: 3px;
 }
 .addresses{
     justify-self: end;
     min-width: 240px;
+        font-style: normal; 
 }
 .addresses_link {
     margin: 0;
@@ -47,6 +53,12 @@ a {
 .address_item a {
         font-weight: 400;
         font-size: 18px;
+        line-height: 24px;
+        text-underline-offset: 4px;
+}
+
+.address_item_underlining {
+    text-decoration: none;
 }
 
 .cover {
@@ -63,6 +75,7 @@ a {
     max-width: 1000px;
     margin: 0 auto;
     padding-top: 145px;
+    padding-bottom: 90px;
 }
 
 .h1_text {
@@ -82,21 +95,24 @@ a {
 
 .align_text_center {
     position: relative;
-    left: 15px;
+    top: 21px;
+    left: 16px;
+    display:block;
     text-align: center;
-
 }
 
 .align_text_right {
     position: relative;
-    left: 30px;
+    top: 40px;
+    left: 29px;
+    display:block;
     text-align: end;
 }
 
 .cover_description {
     display: grid;
     grid-template-columns: 1fr 256px;
-    margin-top: 106px;
+    margin-top: 147px;
     color: white;
 }
 
@@ -130,7 +146,7 @@ a {
 }
 
 .lots_heading {
-    margin: 0 0 27px 40px;
+    margin: 0 0 27px 42px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
@@ -139,11 +155,17 @@ a {
 .lots__card-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
     list-style-type: none;
 }
 .card {
+    background: url(../img/photo.jpg) center center/cover no-repeat;
     width: 334px;
     min-height: 596px;
+}
+
+.card_a {
+    text-decoration: none;
 }
 
 .card .blakout {
@@ -153,16 +175,12 @@ a {
 
 }
 
-.card_type_film{
-    background: url(../img/photo.jpg) center center/cover no-repeat;
-}
-
 .card_type_book {
-    background: url(../img/book.jpg) center center/cover no-repeat;
+    background-image: url(../img/book.jpg);
 }
  
 .card_type_picture {
-    background: url(../img/paitng.jpg) center center/cover no-repeat;
+    background-image: url(../img/paitng.jpg);
 }
 
 .card__title {
@@ -172,21 +190,26 @@ a {
     font-weight: 700;   
     font-size: 22px;
     text-transform: uppercase;
+    text-decoration: underline;
+    word-spacing: 3px;
 }
 
 .card__text {
-    padding: 0 40px 48px 40px;
+    padding: 0 41px 27px 40px;
     color: white;
     font-weight: 400;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 24px;
+    word-spacing: 1px;
 }
 
 .lots__look-more-link {
     display: inline-block;
-    margin: 30px 0 0 40px;
+    margin: 30px 0 0 41px;
     font-weight: 400;
     font-size: 20px;
+    word-spacing: 3px;
+    text-underline-offset: 5px;
 }
 
 .about {
@@ -207,27 +230,26 @@ a {
 }
 
 .about_title {
-    margin-top: 98px;
+    margin-top: 102px;
     font-weight: 700;
     font-size: 40px;
     text-transform: uppercase;
 }
 
 .about_text {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 24px;
-}
-
-.about__margin {
     margin-top: 100px;
+    margin-right: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    word-spacing: 1px;
+    letter-spacing: 0px;
 }
 
 .footer {
     display: flex;
     justify-content: space-between;
-    min-height: 180px;
-    margin: 180px 50px 0 50px;
+    margin: 160px 50px 82px 50px;
 }
 
 .addresses_footer {
@@ -241,9 +263,13 @@ a {
 }
 
 .footer_social-items {
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    margin: 0;
     width: 240px;
+    list-style-type: none;
+    
 }
 
 .footer_social-list {
